@@ -43,6 +43,7 @@ Haskell.createWebSocket = function (url0, receive) {
     };
     ws.onclose = function (e) {
       Haskell.log("WebSocket closed: %o", e);
+      window.location.reload(false);
     };
     ws.onerror = function (e) {
       Haskell.log("WebSocket error: %o", e);
